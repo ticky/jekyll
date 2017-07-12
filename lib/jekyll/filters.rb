@@ -355,7 +355,7 @@ module Jekyll
         raise Errors::InvalidDateError,
           "Invalid Date: '#{input.inspect}' is not a valid datetime."
       end
-      date.to_time.dup.localtime
+      date.to_time.dup
     end
 
     private

@@ -129,7 +129,7 @@ module Jekyll
     # Returns the parsed date if successful, throws a FatalException
     # if not
     def parse_date(input, msg = "Input could not be parsed.")
-      Time.parse(input).localtime
+      Time.parse(input)
     rescue ArgumentError
       raise Errors::InvalidDateError, "Invalid date '#{input}': #{msg}"
     end
